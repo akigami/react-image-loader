@@ -1,21 +1,20 @@
 ReactImg
 ========
 React component for making your site images appear in a fade in.
-See a [demo](http://astrocoders.com/react-image-smooth-loading/).
 
 # Install
 ```
-yarn add react-image-smooth-loading
+yarn add @akigami/react-image-loader
 ```
 _Note_: styled-components and react were added as peer dependencies.
 If you don't have then you must install them as well.
 ```
-yarn add react-image-smooth-loading styled-components react
+yarn add @akigami/react-image-loader emotion react-emotion react
 ```
 # Usage
 
 ```js
-import Img from 'react-image-smooth-loading'
+import Img from '@akigami/react-image-loader'
 
 // Define which placeholder to show while the image is loading
 // Can be any image file.
