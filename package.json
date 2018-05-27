@@ -1,6 +1,6 @@
 {
   "name": "@akigami/react-image-loader",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "React component for making your site images appear in a fade in",
   "main": "dist/index",
   "scripts": {
@@ -28,6 +28,7 @@
   "devDependencies": {
     "@types/prop-types": "^15.5.3",
     "@types/react": "^16.3.14",
+    "lodash": "^4.17.10",
     "prop-types": "^15.6.1",
     "react": "^16.4.0",
     "typescript": "^2.8.3",
@@ -35,8 +36,8 @@
   },
   "dependencies": {},
   "peerDependencies": {
+    "babel-plugin-emotion": "^9.1.0",
     "emotion": "^9.0.2",
-    "react-emotion": "^9.0.2",
-    "babel-plugin-emotion": "^9.1.0"
+    "react-emotion": "^9.0.2"
   }
 }

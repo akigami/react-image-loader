@@ -9,6 +9,7 @@ export interface IProps {
   placeholderProps?: object,
   imageProps?: object,
   alt: string,
+  fit?: 'inherit' | 'contain' | 'cover' | 'fill' | 'initial' | 'none' | 'unset',
   onClick?(name?: any): void,
 };
 
@@ -27,6 +28,7 @@ class Img extends React.PureComponent<IProps, IState> implements IImg {
   static defaultProps = {
     imageProps: {},
     placeholderProps: {},
+    fit: 'inherit',
   }
 
   state = {
@@ -43,6 +45,7 @@ class Img extends React.PureComponent<IProps, IState> implements IImg {
       placeholderProps,
       imageProps,
       src,
+      fit,
       alt,
       ...props
     } = this.props
@@ -52,6 +55,7 @@ class Img extends React.PureComponent<IProps, IState> implements IImg {
         <ImgFinal
           src={src}
           alt={alt}
+          fit={fit}
           {...imageProps}
           onLoad={this.trueLoaded}
         />

@@ -14,24 +14,24 @@ yarn add @akigami/react-image-loader emotion react-emotion react
 # Usage
 
 ```js
-import Img from '@akigami/react-image-loader'
+import Img from '@akigami/react-image-loader';
 
 // Define which placeholder to show while the image is loading
 // Can be any image file.
 // There's already a default one in base64, but you'd like to change ;)
-Img.globalPlaceholder = '/images/placeholder.png'
+Img.globalPlaceholder = '/images/placeholder.png';
 
 export default function ImageList({ list }) {
   return (
     <div className="image-grid">
-      {list.map(url => (
+      {list.map(item => (
         <ImageItemWrapper>
-          <Img src={url} />
+          <Img alt={item.title} src={item.url} />
           <p>My awesome image</p>
         </ImageItemWrapper>
       )}
     </div>
-  )
+  );
 }
 ```
 
@@ -42,15 +42,15 @@ to the space given to it by its container.
 ## Options
 
 ```js
-const props = {
-  src: PropTypes.string.isRequired,
-  placeholder: PropTypes.string, // Optional image placeholder, overrides globalPlaceholder,
-  className: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
-  holderClasses: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
-  placeholderProps: PropTypes.object,
-  onClick: PropTypes.func,
-  alt: PropTypes.string,
-}
-
-<Img {...props} />>
+interface IProps {
+  src: string,
+  placeholder?: string,
+  imgClasses?: string | string[],
+  holderClasses?: string | string[],
+  placeholderProps?: object,
+  imageProps?: object,
+  alt: string,
+  fit?: 'inherit' | 'contain' | 'cover' | 'fill' | 'initial' | 'none' | 'unset',
+  onClick?(name?: any): void,
+};
 ```
