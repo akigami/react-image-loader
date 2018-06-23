@@ -1,6 +1,6 @@
 {
   "name": "@akigami/react-image-loader",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "React component for making your site images appear in a fade in",
   "main": "dist/index",
   "scripts": {
