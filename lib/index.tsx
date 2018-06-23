@@ -57,13 +57,15 @@ class Img extends React.PureComponent<IProps, IState> implements IImg {
     } = this.props
 
     return (
-      <Wrapper {...props}>
+      <Wrapper
+        width={width}
+        height={height}
+        {...props}
+      >
         <ImgFinal
           src={src}
           alt={alt}
           fit={fit}
-          width={width}
-          height={height}
           {...imageProps}
           onLoad={this.trueLoaded}
         />
